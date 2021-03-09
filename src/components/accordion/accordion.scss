@@ -1,0 +1,180 @@
+@import '../global.scss';
+
+.accordion-collapse {
+  .accordion-heading {
+    position: relative;
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-weight: normal;
+    }
+
+    &::before, &::after {
+      font-family: 'Material-Design-Iconic-Font';
+      font-size: 17px;
+      position: absolute;
+      #{$default-direction}: 0;
+      -webkit-transition: all;
+           -o-transition: all;
+              transition: all;
+      -webkit-transition-duration: 300ms;
+              transition-duration: 300ms;
+      top: 4px;
+    }
+
+    &::before {
+      content: "\f278";
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1);
+    }
+
+    &::after {
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      -o-transform: scale(0);
+      transform: scale(0);
+      content: "\f273";
+    }
+
+    .accordion-title {
+      & > a {
+        display: flex;
+        padding: 3px 5px 10px 20px;
+        color: $color-typography;
+        position: relative;
+  
+        &::after, &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          #{$default-direction}: 0;
+          height: 2px;
+          width: 100%;
+          -webkit-transition: all;
+               -o-transition: all;
+                  transition: all;
+          -webkit-transition-duration: 300ms;
+                  transition-duration: 300ms;
+          -webkit-backface-visibility: hidden;
+             -moz-backface-visibility: hidden;
+                  backface-visibility: hidden;
+        }
+  
+        &::after {
+          -webkit-transform: scale(0);
+              -ms-transform: scale(0);
+               -o-transform: scale(0);
+                  transform: scale(0);
+        }
+  
+        &::before {
+          background: $color-typography;
+        }
+      }
+    }
+
+    &.active {
+      .accordion-title {
+        & > a::after {
+          -webkit-transform: scale(1);
+              -ms-transform: scale(1);
+               -o-transform: scale(1);
+                  transform: scale(1);
+        }
+      }
+
+      &::before {
+        -webkit-transform: scale(0);
+            -ms-transform: scale(0);
+             -o-transform: scale(0);
+                transform: scale(0);
+      }
+
+      &::after {
+        -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+             -o-transform: scale(1);
+                transform: scale(1);
+      }
+    }
+  }
+
+  .collapse {
+    position: relative;
+    overflow: hidden;
+
+    &.collapsed {
+      .accordion-body {
+        height: 0;
+      }
+    }
+  }
+
+  .accordion-body {
+    border-top: 0;
+    padding-#{$default-direction}: 5px;
+    padding-right: 5px;
+    
+    overflow: hidden;
+    -webkit-transition-property: height, visibility;
+    transition-property: height, visibility;
+    -webkit-transition-duration: 0.35s;
+    transition-duration: 0.35s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+  }
+}
+
+// Color Theme Definition
+.accordion-group {
+  &:not([color]) {
+    .accordion-collapse .accordion-heading.active .accordion-title > a:after {
+      background: $color-blue;
+    }
+  }
+
+  &[color="red"] {
+    .accordion-collapse .accordion-heading.active .accordion-title > a:after {
+      background: $color-red;
+    }
+  }
+
+  &[color="green"] {
+    .accordion-collapse .accordion-heading.active .accordion-title > a:after {
+      background: $color-green;
+    }
+  }
+
+  &[color="amber"] {
+    .accordion-collapse .accordion-heading.active .accordion-title > a:after {
+      background: $color-amber;
+    }
+  }
+
+  &[color="teal"] {
+    .accordion-collapse .accordion-heading.active .accordion-title > a:after {
+      background: $color-teal;
+    }
+  }
+
+  &[color="black"] {
+    .accordion-collapse .accordion-heading.active .accordion-title > a:after {
+      background: $color-black;
+    }
+  }
+
+  &[color="gray"] {
+    .accordion-collapse .accordion-heading.active .accordion-title > a:after {
+      background: $color-gray;
+    }
+  }
+
+  &[color="cyan"] {
+    .accordion-collapse .accordion-heading.active .accordion-title > a:after {
+      background: $color-cyan;
+    }
+  }
+}

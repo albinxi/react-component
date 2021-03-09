@@ -1,0 +1,45 @@
+/** Themes Definition For quick apply global color change **/
+
+// Light blue
+$theme-blue-bg:               #0070cc;
+$theme-blue-nav:              #007ee6;
+$theme-blue-transparent:      rgba(255, 255, 255, 0.1);
+$theme-blue-hover:            #0062b3;
+$theme-blue-typography:       rgba(255, 255, 255, 0.902);
+
+// Dark blue
+$theme-dark-blue-bg:                    #0665a2;
+$theme-dark-blue-nav:                   #0474b9;
+$theme-dark-blue-nav-hover:             rgba(0, 0, 0, 0.1);
+$theme-dark-blue-transparent:           rgba(255, 255, 255, 0.1);
+$theme-dark-blue-hover:                 rgba(0, 0, 0, 0.1);
+$theme-dark-blue-typography:            rgba(255, 255, 255, 0.902);
+$theme-dark-blue-typography-selection:  #5f6f81;
+
+
+/** Application Color Definition **/
+$color-background:              $theme-dark-blue-bg;
+$color-nav-background:          $theme-dark-blue-nav;
+$color-nav-hover:               $theme-dark-blue-nav-hover;
+$color-typography:              $theme-dark-blue-typography;
+$color-typography-selection:    $theme-dark-blue-typography-selection;
+$color-link-hover:              $theme-dark-blue-hover;
+$color-border:                  $theme-dark-blue-typography;
+
+
+
+// Global Additional Color Definition
+$color-white: rgb(255, 255, 255);
+$color-marking:   $color-nav-background !default;
+$color-highlight: $color-nav-background !default;
+
+$color-primary: $color-background;
+$color-light:   $color-nav-background;
+$color-blue:    #2196f3;
+$color-red:     #f44336;
+$color-green:   #4caf50;
+$color-amber:   #ffc107;
+$color-teal:    #009688;
+$color-black:   #000000;
+$color-gray:    #607D8B;
+$color-cyan:    #00bcd4;

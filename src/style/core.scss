@@ -1,0 +1,21 @@
+@import './_colors.scss';
+@import './_variables.scss';
+@import './fonts.scss';
+@import './core.element.scss';
+@import './core.easy.scss';
+
+div#app {
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 100%;
+
+  @media #{$medium-up} {
+    grid-template-columns: $default-nav-size auto;
+  }
+
+  @media #{$small-only} {
+    grid-template-rows: $default-nav-size auto;
+  }
+}

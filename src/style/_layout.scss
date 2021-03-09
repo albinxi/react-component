@@ -1,0 +1,109 @@
+@import './_variables.scss';
+@import './_colors.scss';
+
+// Flex layout
+.flex, .flex-layout {
+  display: flex;
+
+  &.row {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  &.row-reverse {
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+
+  &.row, &.row-reverse {
+    .column {
+      flex-wrap: wrap;
+      display: inline-flex;
+    }
+  }
+
+  &.columns {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  &.columns-reverse {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column-reverse;
+  }
+
+  &.columns, &.columns-reverse {
+    .column {
+      flex-wrap: wrap;
+      display: inline-flex;
+    }
+  }
+
+  &.grow {
+    .column {
+      flex: 1 0 auto;
+    }
+  }
+
+}
+
+// Grid Layout
+.grid, .grid-layout {
+  display: grid;
+
+  // two columns
+  &.split-2, & .split-2 {
+    grid-template-columns: repeat(2, 1fr);
+
+    &.auto, &.half { grid-template-columns: auto auto; }
+    &.a-quarter, &.size-1of4 { grid-template-columns: 25% 75%; }
+    &.three-quarters, &.size-3of4 { grid-template-columns: 75% 25%; }
+    &.size-1of3 { grid-template-columns: 34% 66%; }
+    &.size-2of3 { grid-template-columns: 66% 34%; }
+  }
+
+  // three columns
+  &.split-3, & .split-3 {
+    grid-template-columns: repeat(3, 1fr);
+
+    &.auto { grid-template-columns: auto auto auto; }
+    &.size-1of2 { grid-template-columns: 50% 25% 25%; }
+    &.size-1of2-center, &.size-1of2-middle { grid-template-columns: 25% 50% 25%; }
+    &.size-1of2-last { grid-template-columns: 25% 25% 50%; }
+    &.size-3-2-1 { grid-template-columns: 50% 34% 16%; }
+    &.size-3-1-2 { grid-template-columns: 50% 16% 34%; }
+  }
+
+  &.split-4, & .split-4 {
+    grid-template-columns: repeat(4, 1fr);
+    
+    &.auto { grid-template-columns: auto auto auto auto; }
+  }
+
+  &.split-5 {
+    grid-template-columns: repeat(5, 1fr);
+    &.auto { grid-template-columns: auto auto auto auto auto; }
+  }
+}
+
+// Vertical Layout
+.vertical, .vertical-layout {
+  -moz-column-fill: balance;
+       column-fill: balance;
+
+  &.size-2 {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+  }
+  &.size-3 {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+  }
+}

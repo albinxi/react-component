@@ -1,0 +1,120 @@
+@import './_variables.scss';
+
+$sizes: (
+  0: 0,
+  5: 5px,
+  10: 10px,
+  15: 15px,
+  20: 20px,
+  25: 25px,
+  30: 30px,
+  35: 35px,
+  40: 40px,
+  45: 45px,
+  50: 50px,
+  55: 55px,
+  60: 60px,
+  65: 65px,
+  70: 70px,
+  75: 75px,
+  80: 80px,
+  85: 85px,
+  90: 80px,
+  95: 95px,
+  100: 100px,
+);
+
+@mixin size-modifiers($attribute: 'margin', $prefix: '-') {
+  @each $name, $value in $sizes {
+    @if $attribute == 'margin' {
+      .m#{$prefix}#{$name} {
+        #{$attribute}: $value !important;
+      }
+    }
+
+    @if $attribute == 'margin-left' {
+      .m-l#{$prefix}#{$name} {
+        #{$attribute}: $value !important;
+      }
+    }
+
+    @if $attribute == 'margin-right' {
+      .m-r#{$prefix}#{$name} {
+        #{$attribute}: $value !important;
+      }
+    }
+
+    @if $attribute == 'margin-top' {
+      .m-t#{$prefix}#{$name} {
+        #{$attribute}: $value !important;
+      }
+    }
+
+    @if $attribute == 'margin-bottom' {
+      .m-b#{$prefix}#{$name} {
+        #{$attribute}: $value !important;
+      }
+    }
+
+    @if $attribute == 'padding' {
+      .p#{$prefix}#{$name} {
+        #{$attribute}: $value !important;
+      }
+    }
+
+    @if $attribute == 'padding-left' {
+      .p-l#{$prefix}#{$name} {
+        #{$attribute}: $value !important;
+      }
+    }
+
+    @if $attribute == 'padding-right' {
+      .p-r#{$prefix}#{$name} {
+        #{$attribute}: $value !important;
+      }
+    }
+
+    @if $attribute == 'padding-top' {
+      .p-t#{$prefix}#{$name} {
+        #{$attribute}: $value !important;
+      }
+    }
+
+    @if $attribute == 'padding-bottom' {
+      .p-b#{$prefix}#{$name} {
+        #{$attribute}: $value !important;
+      }
+    }
+
+    @if $attribute == 'width' {
+      .w#{$prefix}#{$name} {
+        #{$attribute}: $value !important;
+      }
+    }
+  }
+}
+
+@include size-modifiers('margin');
+@include size-modifiers('margin-left');
+@include size-modifiers('margin-right');
+@include size-modifiers('margin-top');
+@include size-modifiers('margin-bottom');
+@include size-modifiers('padding');
+@include size-modifiers('padding-left');
+@include size-modifiers('padding-right');
+@include size-modifiers('padding-top');
+@include size-modifiers('padding-bottom');
+@include size-modifiers('width');
+
+.no-padding, .n-p { padding: 0 !important; }
+
+.inline-text { display: inline-block; }
+
+.text-left { text-align: #{$default-direction}; }
+.text-right { text-align: #{$opposite-direction}; }
+.text-center { text-align: center;}
+
+.hide, [hide] { display: none !important; }
+
+.pre-line { white-space: pre-line; }
+.pre-wrap { white-space: pre-wrap; }

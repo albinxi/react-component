@@ -1,0 +1,18 @@
+{
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "javascript.format.placeOpenBraceOnNewLineForFunctions": false,
+  "javascript.format.placeOpenBraceOnNewLineForControlBlocks": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "scss.completion.completePropertyWithSemicolon": true,
+  "scss.completion.triggerPropertyValueCompletion": true,
+  "scss.lint.argumentsInColorFunction": "error",
+  "scss.lint.emptyRules": "warning",
+  "scss.lint.float": "ignore",
+  "css.completion.completePropertyWithSemicolon": true,
+  "css.completion.triggerPropertyValueCompletion": true,
+  "css.lint.emptyRules": "warning",
+  "css.lint.float": "ignore",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+}

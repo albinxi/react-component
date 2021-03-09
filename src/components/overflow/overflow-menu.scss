@@ -1,0 +1,83 @@
+@import '../global.scss';
+
+.actions {
+  position: absolute;
+  right: 0;
+
+  & > li {
+    &.drop-down {
+      position: relative;
+
+      i {
+        font-size: $font-size-large;
+        color: $color-typography;
+        padding-top: 5px;
+      }
+    }
+
+    & > a {
+      -webkit-transition: all;
+           -o-transition: all;
+              transition: all;
+      -webkit-transition-duration: 400ms;
+              transition-duration: 400ms;
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      text-align: center;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.08);
+      }
+    }
+
+    ul.drop-down-list {
+      border-radius: 3px;
+      margin: 0;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      z-index: 9;
+      min-width: 150px;
+      font-size: $font-size-normal;
+      text-align: #{$default-direction};
+      background-color: $color-nav-background;
+      
+      -webkit-background-clip: padding-box;
+              background-clip: padding-box;
+      -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0,.175);
+              box-shadow: 0 6px 12px rgba(0, 0, 0,.175);
+      -webkit-animation-name: fadeIn;
+              animation-name: fadeIn;
+      -webkit-animation-duration: 300ms;
+              animation-duration: 300ms;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both;
+
+      &.off {
+        display: none;
+      }
+
+      &.on {
+        display: block;
+      }
+
+      li {
+        color: $color-typography;
+
+        &:hover {
+          background: $color-link-hover;
+        }
+
+        & a, & label {
+          display: block;
+          width: 100%;
+          padding: 5px 5px 8px 8px;
+          color: $color-typography;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

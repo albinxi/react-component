@@ -1,0 +1,50 @@
+@import '../../global.scss';
+
+.typography-example {
+  ol {
+    padding: 0 0 0 #{$default-padding};
+    margin: 0;
+  }
+
+  .grid {
+    display: grid;
+    align-items: center
+  }
+
+  .split-2-customized {
+    grid-template-columns: 35% 65%;
+  }
+
+  .split-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .split-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .split-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .desc {
+    padding: 10px 0;
+    line-height: 20px;
+
+    & + .desc {
+      padding: 0 0 10px 0;
+    }
+  }
+
+  code {
+    font-size: $font-size-normal;
+    color: $color-typography;
+    margin: 0;
+  }
+
+  mark {
+    width: 100%;
+    text-align: center;
+    padding: 2px 2px 3px 2px;
+  }
+}
